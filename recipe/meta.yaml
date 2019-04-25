@@ -1,5 +1,5 @@
 {% set name = "dockerspawner" %}
-{% set version = "0.11.0" %}
+{% set version = "0.11.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cd8abaafacecb3452fbd8def24d45d855d7573024879f8d05dfc371ec68e6e1c
+  sha256: 83fd8ee012bb32432cb57bd408ff65534749aed8696648e6ac029a87fc474928
 
 build:
   noarch: python
