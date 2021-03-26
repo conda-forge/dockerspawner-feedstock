@@ -1,5 +1,5 @@
 {% set name = "dockerspawner" %}
-{% set version = "0.11.1" %}
+{% set version = "12.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 83fd8ee012bb32432cb57bd408ff65534749aed8696648e6ac029a87fc474928
+  sha256: b2cf2f4284b71f0bf34bc79c622f54805275167c83b446dfc05d8ee27294d60b
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install --no-deps --ignore-installed --no-cache-dir -vv ."
+  script: {{ PYTHON }} -m pip install --no-deps --ignore-installed --no-cache-dir -vv .
 
 requirements:
   host:
