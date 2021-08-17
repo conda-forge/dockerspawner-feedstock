@@ -22,7 +22,7 @@ requirements:
     - python >=3.5
     - docker-py
     - escapism
-    - jupyterhub >=0.4
+    - jupyterhub >=1.0
 
 test:
   imports:
