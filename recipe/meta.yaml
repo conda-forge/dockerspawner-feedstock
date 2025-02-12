@@ -23,7 +23,7 @@ requirements:
     - python >={{ python_min }}
     - docker-py
     - escapism
-    - jupyterhub-base >=2.3.1
+    - jupyterhub-base >=4.0.0
 
 test:
   requires:
