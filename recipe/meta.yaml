@@ -1,5 +1,5 @@
 {% set name = "dockerspawner" %}
-{% set version = "13.0.0" %}
+{% set version = "14.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3ce95367d96e4bdc10fefb7dc3c54c7d312a1b383f0e17c1e3978f7ef9f28ada
+  sha256: 5641d4763ecc78c1b1c3c7621bfe88c055596893e43be7f66ee0dccac06c1d2a
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed --no-cache-dir -vv .
 
 requirements:
@@ -23,7 +23,7 @@ requirements:
     - python >={{ python_min }}
     - docker-py
     - escapism
-    - jupyterhub-base >=2.3.1
+    - jupyterhub-base >=4.0.0
 
 test:
   requires:
@@ -33,7 +33,7 @@ test:
     - dockerspawner
   commands:
     - pip check
-    
+
 
 about:
   home: https://github.com/jupyterhub/dockerspawner
